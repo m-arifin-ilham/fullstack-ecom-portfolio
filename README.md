@@ -21,23 +21,23 @@ Here's a high-level view of how these services interact:
 
 ## Individual Projects
 
-Each project in this portfolio is a standalone repository, developed with a focus on best practices, clean architecture, and specific functionalities.
+Each project in this prototype is a standalone repository, developed with a focus on best practices, clean architecture, and specific functionalities.
 
 ### 1. User Management RESTful API (Flask Backend)
 
 * **Repository:** [User Management API GitHub Repo](https://github.com/m-arifin-ilham/User-Management-API)
 
-* **Description:** A secure and scalable backend API for managing user accounts. It features robust user registration, login with JWT access and refresh tokens, role-based authorization, and secure password management. This API serves as the central authentication and user profile service for the entire e-commerce ecosystem.
+* **Description:** A secure and scalable backend API for managing user accounts. It features robust user registration, login with JWT access and refresh tokens, role-based authorization, and secure password management. This API serves as the central authentication and user profile service for the entire e-commerce ecosystem, specifically managing **internal users like branch managers and sales representatives** to enable tracking of individual sales contributions.
 
-* **Key Skills Showcased:** Python, Flask, RESTful APIs, JWT Authentication, API Security, Layered Architecture, SOLID Principles.
+* **Key Skills:** Python, Flask, RESTful APIs, JWT Authentication, API Security, Layered Architecture, SOLID Principles.
 
 ### 2. Product Catalog API (Django Backend)
 
 * **Repository:** [Product Catalog API GitHub Repo](https://github.com/m-arifin-ilham/Product-Catalog-API)
 
-* **Description:** A feature-rich RESTful API built with Django and Django REST Framework (DRF) for managing a comprehensive product catalog. It supports full CRUD operations for products and categories, advanced filtering, dynamic sorting, and basic inventory management (including a custom purchase endpoint). This API provides the core product data for the e-commerce platform.
+* **Description:** A feature-rich RESTful API built with Django and Django REST Framework (DRF) for managing a comprehensive product catalog. It supports full CRUD operations for products and categories, advanced filtering, dynamic sorting, and basic inventory management (including a custom purchase endpoint). Write operations are secured with API Key authentication, while read operations are publicly accessible. Includes auto-generated Swagger/OpenAPI documentation. This API provides the core product data for the e-commerce platform.
 
-* **Key Skills Showcased:** Python, Django, Django REST Framework, ORM, Advanced Filtering & Sorting, API Documentation (drf-yasg).
+* **Key Skills:** Python, Django, Django REST Framework, ORM, Advanced Filtering & Sorting, API Documentation (drf-yasg), API Key Authentication.
 
 ### 3. Simple Sales Tracker (Flask Backend & React Frontend)
 
@@ -45,9 +45,9 @@ Each project in this portfolio is a standalone repository, developed with a focu
 
 * **Backend Repository:** [Sales Tracker Backend GitHub Repo](https://github.com/m-arifin-ilham/Sales-Tracker-Backend)
 
-* **Description:** A full-stack web application that allows users to record new sales and visualize sales data. The Flask backend stores sales records and integrates with the Product Catalog API to decrement stock. The React frontend provides a user-friendly interface for data input and displays interactive charts (total revenue, sales by product) for quick insights.
+* **Description:** A full-stack web application for recording and visualizing sales data. The Flask backend stores sales records, calculates revenue, and securely integrates with both the User Management API (for user authentication) and the Product Catalog API (for inventory updates). The React frontend provides a user-friendly interface for data input, manages user login/logout, handles JWT tokens, and displays interactive charts with a modern UI.
 
-* **Key Skills Showcased:** Python (Flask), React, Full-Stack Development, API Integration, Data Visualization (Recharts), Responsive UI (Tailwind CSS).
+* **Key Skills:** Python (Flask), React, Full-Stack Development, API Integration, Data Visualization (Recharts), Responsive UI (Tailwind CSS), User Authentication (JWT), Token Refresh Logic, Secure Frontend Development.
 
 ## Technologies Across the Portfolio
 
@@ -59,9 +59,9 @@ This portfolio demonstrates versatility across various Python and JavaScript tec
 
 * **Databases:** SQLite (for local development), PostgreSQL (for deployment consideration)
 
-* **Security:** Bcrypt, JWT
+* **Security:** Bcrypt, JWT, API Key Authentication, Token Refresh Mechanism
 
-* **Development Practices:** RESTful API Design, Layered Architecture, SOLID Principles, Test-Driven Development (TDD), Version Control (Git)
+* **Development Practices:** RESTful API Design, Layered Architecture, SOLID Principles, Test-Driven Development (TDD), Version Control (Git), CORS Management.
 
 ## Getting Started with the Ecosystem
 
@@ -81,11 +81,14 @@ This portfolio represents a foundational infrastructure. Future enhancements cou
 
 * Full deployment of all services to a cloud platform (e.g., Render, AWS).
 
-* Integration of the User Management API for user-specific sales tracking and authentication in the Sales Tracker frontend.
+* **Full Customer-Facing E-commerce Storefront:** Implementing a complete shopping cart and checkout process in a **new, dedicated online store frontend**, consuming the Product Catalog API. This would be the public-facing interface where customers browse products, add them to a cart, and complete purchases.
 
-* Implementing a shopping cart and checkout process in the frontend, consuming the Product Catalog API.
+* **User Authentication & Sales Tracking for Customers:** Integration of the User Management API for user-specific sales tracking and authentication in a **new, customer-facing online store frontend**. This would allow individual customers to log in, view their order history, and manage their profiles.
 
 * Adding more advanced analytics and machine learning models for sales forecasting or customer segmentation.
 
+---
+
 *Developed by [Muhammad Arifin Ilham](https://www.linkedin.com/in/arifin-ilham-at-ska/)*
-*Current Date: August 9, 2025
+
+*Current Date: August 9, 2025*
